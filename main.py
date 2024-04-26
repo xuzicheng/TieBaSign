@@ -212,10 +212,7 @@ def send_email(sign_list):
     smtp.quit()
 
 def main():
-    if ('BDUSS' not in ENV):
-        logger.error("未配置BDUSS")
-        return
-    b = ENV['BDUSS'].split('#')
+    b = ['RyVE42ekdIb3VHWkpWcFBQT3JlRVYxT21BLVhqUXVWQ04wZTZQWDd1fmJjWmxsSVFBQUFBJCQAAAAAAAAAAAEAAAD3wLCSv8m28bXE08O7p8P7dG0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANvkcWXb5HFlVE']
     for n, i in enumerate(b):
         logger.info("开始签到第" + str(n) + "个用户" + i)
         tbs = get_tbs(i)
